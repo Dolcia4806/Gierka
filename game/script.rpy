@@ -29,8 +29,7 @@ image bg drzwi_wyjsciowe ="drzwi_wyjscie"
 
 # ----- START GRY--------
 label start:
-    scene bg start 
-    
+    scene bg start  
     "Budzi cię potworny ból głowy. Wokół panuje półmrok, a powietrze pachnie stęchlizną i metalem."
     "Próbujesz wstać, ale przez silne zawroty głowy, twoje ciało odmawia posłuszeństwa"
     "Przez silne zawroty wydaje ci się że słyszysz znajomy głos, ale nic ci nieprzychodzi do głowy"
