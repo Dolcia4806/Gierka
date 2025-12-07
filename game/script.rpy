@@ -17,7 +17,7 @@ default generator_otwarty= False
 
 ## ----TŁA---------
 image bg start ="pokoj1"
-image bg Korytaz ="Korytarz_no_light"
+image bg Korytarz ="Korytarz_no_light"
 image bg stolowka ="stoufka"
 image bg apteka1 ="apteka"
 image bg apteka2 ="apteka2"
@@ -27,9 +27,41 @@ image bg serwerownia ="komputerownia"
 image bg zbrojownia ="zbrojownia"
 image bg drzwi_wyjsciowe ="drzwi_wyjscie"
 
+
+
+# ----- INVENTORY ------------
+# Inicjalizacja
+default backpack = Inventory()
+
+# Definiujemy przedmioty używając nazw obrazków z Kroku 2
+define key_item = Item("Klucz", "key_idle", "key_hover")
+define apple_item = Item("Jabłko", "apple_idle", "apple_hover")
+
+label start:
+    scene black
+    "Zacznijmy. Twój plecak jest pusty."
+
+    # Dodajemy przedmioty w konkretnych miejscach (piksele względem ramki plecaka)
+    # x=100, y=200
+    $ backpack.add(key_item, 100, 200)
+    
+    # x=400, y=350 (zupełnie inne miejsce)
+    $ backpack.add(apple_item, 400, 350)
+
+    "Dodałem przedmioty w losowych miejscach. Otwórz plecak, aby zobaczyć."
+
+    show screen messy_inventory
+    
+    # Czekamy na kliknięcie w przedmiot (screen zwraca nazwę przedmiotu przez 'Return')
+    $ result = ui.interact()
+
+    "Kliknąłeś w: [result]!"
+
+    return
 # ----- START GRY--------
 label start:
-    scene bg start  
+    scene bg start 
+
     "Budzi cię potworny ból głowy. Wokół panuje półmrok, a powietrze pachnie stęchlizną i metalem."
     "Próbujesz wstać, ale przez silne zawroty głowy, twoje ciało odmawia posłuszeństwa"
     "Przez silne zawroty wydaje ci się że słyszysz znajomy głos, ale nic ci nieprzychodzi do głowy"
