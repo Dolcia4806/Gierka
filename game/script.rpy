@@ -93,9 +93,8 @@ TŁO
 
 
 
-   ### show radio at right
-    ###radio"Witaj w moim świecie! Zanim zaczniemy, powiedz mi, jak się nazywasz?"
-   ## $ player_name = renpy.input("Jak masz na imię?", length=15).strip()
+### show radio at right
+###radio"Witaj w moim świecie! Zanim zaczniemy, powiedz mi, jak się nazywasz?" ## $ player_name = renpy.input("Jak masz na imię?", length=15).strip()
     ##    $ player_name = "hero"
     #show hero_poczatek at left
     #hero"Możesz na mnie mówić [player_name]."
@@ -104,21 +103,20 @@ TŁO
     #radio "wyglądasz na przygnębionego. Wszystko w porządku?"
 
     #label Choice:   
-   # menu:
-   #     "Co jej odpowiesz?"
-     #   "Nic mi nie jest. Po prostu się zamyśliłem.":
-    #            
-     #           hero "Nie, wszystko w porządku. Po prostu... zamyśliłem się na chwilę."
-      ####Szczerze? Nie czuję się najlepiej.":
+# menu:
+#     "Co jej odpowiesz?"
+#   "Nic mi nie jest. Po prostu się zamyśliłem.":  #            
+#           hero "Nie, wszystko w porządku. Po prostu... zamyśliłem się na chwilę."
+    ####Szczerze? Nie czuję się najlepiej.":
                 
-     #     3      hero "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
+    #     3      hero "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
     #       3     radio "Och... Chcesz o tym porozmawiać?"
 
             # OPCJA 3
-  ##      "(Milcz)":
+            ##      "(Milcz)":
             
-      #          hero "..."
-       ##
+    #          hero "..."
+##
     # Kod tutaj wykonuje się po zakończeniu wyboru
     #radio "W każdym razie, cieszę się, że tu jesteś."
 
